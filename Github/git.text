@@ -33,5 +33,36 @@ reset : 취소
 	-> commit 취소 : git reset HEAD~(n)
 	ex) git reset HEAD~2 : 마지막 2개 커밋 취소
 	-> HEAD : 현재 브런치 마지막 commit의 포인터(주소)
+checkout : 저장소로부터 소스를 가져와 로컬에 복사
+	-> 
+	-> -b : 신규브랜치 생성, 원격 저장소의 브랜치와 연결
+	ex) git checkout -b develop
+clone : 저장소의 복사본을 생성
+	-> git clone [저장소_주소] [로컬_디럭테러]
+	ex) git clone http://github.com/psy1064/git-training ./Osam
+merge :
+branch : 
+
 	
+
+3. pull-request : 다른 프로젝트에 내가 만든 commit 제출
+순서 : 상대방의 프로젝트를 복사(fork) -> 내 계정에 같은 이름의 프로젝트 생성 -> commit & push -> pull-request
+fork 
+	-> 원하는 프로젝트의 원격 저장소에서 Fork 클릭
+	-> 내 저장소에 생성
+	
+project production
+	-> git clone [fork한 repository에서 복사한 URL]
+	-> git checkout -b [branch name]
+	
+git add & commit & push
+
+pull-request
+	-> fork해서 만들어진 project page로 이동
+	-> click branch tap
+	-> pull-request 하려는 branch에서 New pull-request 버튼 클릭
+	-> pull-request 보내기
+	-> 본래 project에서 만들어진 pull-request 확인
+
+
 
