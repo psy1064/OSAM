@@ -34,15 +34,21 @@ reset : 취소
 	ex) git reset HEAD~2 : 마지막 2개 커밋 취소
 	-> HEAD : 현재 브런치 마지막 commit의 포인터(주소)
 checkout : 저장소로부터 소스를 가져와 로컬에 복사
-	-> 
 	-> -b : 신규브랜치 생성, 원격 저장소의 브랜치와 연결
 	ex) git checkout -b develop
+	-> git branch [branch 명] : branch 변경
 clone : 저장소의 복사본을 생성
 	-> git clone [저장소_주소] [로컬_디럭테러]
 	ex) git clone http://github.com/psy1064/git-training ./Osam
-merge :
-branch : 
-
+merge : 여러 branch를 통합
+	-> git merge [원하는 branch명]
+	ex) git merge develop
+branch : branch 생성, 삭제, 이름 변경 등 관리
+	-> -d : branch 삭제(branch의 소스가 현재 HEAD에 적용이 되었는지 확인 후 삭제)
+	-> -D : branch 삭제(HEAD에 적용되어 있는지 확인 X)
+	-> -m : branch 이름 변경(이미 존재하는 이름이면 덮어쓰지 않고 오류 메세지 출력)
+	-> -M : branch 이름 변경(이미 존재하는 이름이면 덮어씀)
+	-> git branch [branch 명] : 해당 branch가 없을 경우 생성
 	
 
 3. pull-request : 다른 프로젝트에 내가 만든 commit 제출
@@ -65,4 +71,5 @@ pull-request
 	-> 본래 project에서 만들어진 pull-request 확인
 
 
+4. branch
 
