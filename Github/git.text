@@ -71,5 +71,24 @@ pull-request
 	-> 본래 project에서 만들어진 pull-request 확인
 
 
-4. branch
+4. branch : 가지치기, 버전관리 
+
+5. rebase : base 교체
+	-> clone 하여 개발 중, 최신 업데이트 파일이 나옴
+	-> 쌓아온 commit 을 빼고 tree를 최신 업데이트
+	-> 그 후 commit 을 쌓는다
+	
+rebase-interactive : 중간에 낀 commit 수정
+	1. git rebase -i --root 
+	2. 에디터가 출력되는데 commit 창이 나온다
+	3. 원하는 커밋의 pick을 edit으로 수정 후 저장
+	4. git shortlog로 보면 수정을 원하는 commit 으로 rebase 상태
+	5. git commit --amend로 커밋 수정
+	6. git rebase --continue로 rebase 마무리
+	
+6. git blame : 특정 커밋을 식별할 때 사용, 수정 사항을 볼 수 있음
+	-> git blame [option] [rev-opts] [rev] [file]
+	ex) git blame HEAD Github/git.text
+	ex) git blame HEAD -L 5,9 Github/git.text 
+	: git.text의 5~9 줄의 마지막 수정 정보 조회
 
