@@ -1,6 +1,9 @@
 # Queue example
 # Queue is FIFO(first in first out) construction
 
+def printqueue(_list):
+	for x in range(len(_list)):
+		print("순서 = ", x+1, "데이터 = ", _list[x])
 queue = []
 
 while(1):
@@ -11,3 +14,5 @@ while(1):
 
 for x in range(len(queue)):
 	print("순서 = ", x+1, "데이터 = ", queue[x])
+
+printqueue(queue)
