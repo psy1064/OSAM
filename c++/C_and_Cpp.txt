@@ -1,0 +1,8 @@
+Hello world
+x = 10y = 20
+Input Number = Hello world
+x = 10y = 20
+Input Number = x = 1
+b is true
+truefalse
+auto i2 = 10auto d2 = 3.14
